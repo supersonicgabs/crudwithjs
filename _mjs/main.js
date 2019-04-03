@@ -15,45 +15,52 @@ function FormMask(f) {
   }));
 }
 
+const pk = document.querySelector('#cpfcnpj')
+const nome = document.querySelector('#nome')
+const razao = document.querySelector('#razao')
+const endereco = document.querySelector('#endereco')
+const cep = document.querySelector('#cep')
+const numero = document.querySelector('#numero')
+const bairro = document.querySelector('#bairro')
+const cidade = document.querySelector('#cidade')
+const estado = document.querySelector('#estado')
+const email = document.querySelector('#email')
+
 function makeObj(data){
   return {
-    nome: document.querySelector('#nome').value,
-    razao: document.querySelector('#razao').value,
-    cpf: document.querySelector('#cpfcnpj').value,
-    endereco: document.querySelector('#endereco').value,
-    cep: document.querySelector('#cep').value,
-    numero: document.querySelector('#numero').value,
-    bairro: document.querySelector('#bairro').value,
-    cidade: document.querySelector('#cidade').value,
-    estado: document.querySelector('#estado').value,
-    email: document.querySelector('#email').value,
+    nome: nome.value,
+    razao: razao.value,
+    cpf: pk.value,
+    endereco: endereco.value,
+    cep: cep.value,
+    numero: numero.value,
+    bairro: bairro.value,
+    cidade: cidade.value,
+    estado: estado.value,
+    email: email.value,
   }
 }
 let array = []
 
-const pk = document.querySelector('#cpfcnpj')
-// const nome = document.querySelector('#nome').value
-// const razao = document.querySelector('#razao').value
-// const endereco = document.querySelector('#endereco').value
-// const cep = document.querySelector('#cep').value
-// const numero = document.querySelector('#numero').value
-// const bairro = document.querySelector('#bairro').value
-// const cidade = document.querySelector('#cidade').value
-// const estado = document.querySelector('#estado').value
-// const email = document.querySelector('#email').value
 const clearForm = document.querySelector('.contact-form')
 
 document.querySelector('.enviar').onclick = function() {
-    let indexArray = array.findIndex( elem => {
-        return elem.cpf === pk.value
-    })
-    if (indexArray > -1) {
-        array[indexArray] = makeObj();
-    } else {
-        array.push(makeObj());
+    if(nome.value!=null, nome.value!="" && pk.value!=null, pk.value!="" && razao.value!=null, razao.value!="" && endereco.value!=null, endereco.value!="" && cep.value!=null, cep.value!="" && numero.value!=null, numero.value!="" && bairro.value!=null, bairro.value!="" && cep.value!=null, cep.value!="" && cidade.value!=null, cidade.value!="" && estado.value!=null, estado.value!="" && email.value!=null, email.value!="")
+    {
+        let indexArray = array.findIndex( elem => {
+            return elem.cpf === pk.value
+        })
+        if (indexArray > -1) {
+            array[indexArray] = makeObj();
+        } else {
+            array.push(makeObj());
+        }
+        transformText(array);
+        clearForm.reset();        
     }
-    transformText(array);
-    clearForm.reset();
+    else{
+        alert('Preencha todos os campos!')
+    }
 }
 function arrayRemove(arr, value){
     return arr.filter(function(ele, index){
