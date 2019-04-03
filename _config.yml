@@ -1,0 +1,40 @@
+---
+title: "crudwithjs"
+timezone: America/Sao_Paulo
+collections:
+  paginas:
+    output: true  
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: posts    
+  values:
+    layout: post
+    permalink: ':categories/:title.html'
+description: CRUD with js
+baseurl: ""
+url: ''
+markdown: kramdown
+paginate: 10
+paginate_path: '/:num/'
+plugins:
+  - jekyll-paginate
+sass:
+  style: compressed
+exclude:
+- node_modules
+- desktop.ini
+- gulpfile.js
+- npm-debug.log
+- package.json
