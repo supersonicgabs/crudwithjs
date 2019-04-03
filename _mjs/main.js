@@ -18,23 +18,35 @@ function FormMask(f) {
 function makeObj(data){
   return {
     nome: document.querySelector('#nome').value,
-    email: document.querySelector('#email').value,
     razao: document.querySelector('#razao').value,
     cpf: document.querySelector('#cpfcnpj').value,
-    // assunto: document.querySelector('[name="assunto"]').value,
-    // mensagem: document.querySelector('[name="mensagem"]').value,
+    endereco: document.querySelector('#endereco').value,
+    cep: document.querySelector('#cep').value,
+    numero: document.querySelector('#numero').value,
+    bairro: document.querySelector('#bairro').value,
+    cidade: document.querySelector('#cidade').value,
+    estado: document.querySelector('#estado').value,
+    email: document.querySelector('#email').value,
   }
 }
 let array = []
-const pk = document.querySelector('#cpfcnpj')
-const clearForm = document.querySelector(".contact-form")
 
-document.querySelector(".enviar").onclick = function() {
+const pk = document.querySelector('#cpfcnpj')
+// const nome = document.querySelector('#nome').value
+// const razao = document.querySelector('#razao').value
+// const endereco = document.querySelector('#endereco').value
+// const cep = document.querySelector('#cep').value
+// const numero = document.querySelector('#numero').value
+// const bairro = document.querySelector('#bairro').value
+// const cidade = document.querySelector('#cidade').value
+// const estado = document.querySelector('#estado').value
+// const email = document.querySelector('#email').value
+const clearForm = document.querySelector('.contact-form')
+
+document.querySelector('.enviar').onclick = function() {
     let indexArray = array.findIndex( elem => {
         return elem.cpf === pk.value
     })
-    console.log('filterarray', indexArray)
-
     if (indexArray > -1) {
         array[indexArray] = makeObj();
     } else {
@@ -49,7 +61,7 @@ function arrayRemove(arr, value){
     });
 }
 
-document.querySelector(".deletar").onclick = function() {    
+document.querySelector('.deletar').onclick = function() {    
     let indexArray = array.findIndex( elem => {
         return elem.cpf === pk.value
     }) 

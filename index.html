@@ -13,7 +13,7 @@
         .demo-card-wide > .mdl-card__title {
             color: #fff;
             height: 176px;
-            background: url('../assets/demos/welcome_card.jpg') center / cover;
+            background: url('../img/bg-teste.jpg') center / cover;
         }
         .demo-card-wide > .mdl-card__menu {
             color: #fff;
@@ -21,64 +21,134 @@
     </style>
 </head>
 <body>
-    <section class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col">
-                <h4 class="results__heading">Formulário de Contato</h4>
-            <form class="contact-form mdl-grid">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
-                        <label class="mdl-textfield__label" for="nome">Nome:</label>
-                        <input class="mdl-textfield__input" type="text" name="nome" id="nome" data-mask="nome" maxlength="100" required>
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
-                        <label class="mdl-textfield__label" for="razao">Razão Social:</label>
-                        <input class="mdl-textfield__input" type="text" name="razao" id="razao" data-mask="nome" maxlength="100" required>
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
-                        <label class="mdl-textfield__label" for="cpfcnpj">Tipo de pessoa (CPF/CNPJ):</label>
-                        <input class="mdl-textfield__input" type="text" name="cpfcnpj" data-mask="cpfcnpj" id="cpfcnpj" required>
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
-                        <label class="mdl-textfield__label" for="endereco">Endereço:</label>
-                        <input class="mdl-textfield__input" type="text" name="endereco" id="endereco" maxlength="100" required>
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
-                        <label class="mdl-textfield__label" for="email">E-mail:</label>
-                        <input class="mdl-textfield__input" type="email" name="email" id="email" required>
-                    </div>
-                    <div class="mdl-cell--12-col">
-                        <a data-enviar class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored enviar">Enviar</a>
-                        <a data-enviar class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored deletar">Deletar</a>
-                    </div>
-                </form>
-        </div>
-        <div class="mdl-cell mdl-cell--4-col">
-            <section class="results">
-                <h4 class="results__heading">Dados do formulário</h4>
-                <pre class="results__display-wrapper"><code class="results__display"></code></pre>
-            </section>            
-        </div>
-        <div class="mdl-cell mdl-cell--4-col">
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Welcome</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sagittis pellentesque lacus eleifend lacinia...
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    Get Started
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                    <i class="material-icons">share</i>
-                    </button>
-                </div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">[supersonic.gabs]</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="https://github.com/supersonicgabs" target="_blank">Github</a>
+                <a class="mdl-navigation__link" href="https://supersonicgabs.github.io/" target="_blank">Blog</a>
+                <a class="mdl-navigation__link" href="https://raullesteves.github.io/synertech/" target="_blank">Synertech</a>
+            </nav>
             </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">[supersonic.gabs]</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="https://github.com/supersonicgabs" target="_blank">Github</a>
+                <a class="mdl-navigation__link" href="https://supersonicgabs.github.io/" target="_blank">Blog</a>
+                <a class="mdl-navigation__link" href="https://raullesteves.github.io/synertech/" target="_blank">Synertech</a>
+            </nav>
         </div>
-    </section>   
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <section class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col">
+                            <h4 class="results__heading">Formulário de Contato</h4>
+                        <form class="contact-form mdl-grid">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="nome">Nome:</label>
+                                    <input class="mdl-textfield__input" type="text" name="nome" id="nome" data-mask="nome" maxlength="100" required>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="razao">Razão Social:</label>
+                                    <input class="mdl-textfield__input" type="text" name="razao" id="razao" data-mask="nome" maxlength="100" required>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="cpfcnpj">Tipo de pessoa (CPF/CNPJ):</label>
+                                    <input class="mdl-textfield__input" type="text" name="cpfcnpj" data-mask="cpfcnpj" id="cpfcnpj" required>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="endereco">Endereço:</label>
+                                    <input class="mdl-textfield__input" type="text" name="endereco" id="endereco" maxlength="100" required>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="cep">CEP:</label>
+                                    <input class="mdl-textfield__input" type="text" name="cep" id="cep" data-mask="cep" required>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="numero">Número:</label>
+                                    <input class="mdl-textfield__input" type="number" name="numero" id="numero" maxlength="5" required>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="bairro">Bairro:</label>
+                                    <input class="mdl-textfield__input" type="text" name="bairro" id="bairro" maxlength="100" required>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="cidade">Cidade:</label>
+                                    <input class="mdl-textfield__input" type="text" name="cidade" id="cidade" data-mask="nome" maxlength="100" required>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="estado">Estado:</label>
+                                    <select class="mdl-textfield__input" id="estado" name="estado">
+                                        <option value=""></option>
+                                        <option value="AC">AC</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AP">AP</option>
+                                        <option value="AM">AM</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="DF">DF</option>
+                                        <option value="ES">ES</option>
+                                        <option value="GO">GO</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MT">MT</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MG">MG</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PR">PR</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="RN">RN</option>
+                                        <option value="RS">RS</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SP">SP</option>
+                                        <option value="SE">SE</option>
+                                        <option value="TO">TO</option>
+                                    </select>                        
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+                                    <label class="mdl-textfield__label" for="email">E-mail:</label>
+                                    <input class="mdl-textfield__input" type="email" name="email" id="email" required>
+                                </div>
+                                <div class="mdl-cell--12-col">
+                                    <a data-enviar class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored enviar">Enviar</a>
+                                    <a data-enviar class="mdl-button mdl-js-button mdl-button--raised deletar">Deletar</a>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        &nbsp;
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text">Dados do formulário</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <pre><code class="results__display"></code></pre>
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                            </div>
+                            <div class="mdl-card__menu">
+                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                <i class="material-icons">share</i>
+                                </button>
+                            </div>
+                        </div>                      
+                    </div>
+                </section>   
+            </div>
+        </main>
+    </div>    
 </body>
 <script src="script/main.js"></script>
 </html>
